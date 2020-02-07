@@ -19,27 +19,26 @@ def string_strippen():
     l2 = []
     index = 0
 
-    for i in s1.strip():
-        l1.append(i)
-    for j in s2.strip():
-        l2.append(j)
+    for let in s1.strip():
+        l1.append(let)
+    for letter in s2.strip():
+        l2.append(letter)
 
-    print(l1)
-    print(len(l1))
-    print(l2)
-    print(len(l2))
+    # print(l1)
+    # print(len(l1))
+    # print(l2)
+    # print(len(l2))
 
     i = 0
     j = 0
     index = 0
     while i <=len(l1) or j<= len(l2): # TODO regel verbeteren. Doel:
             if l1[i] == l2[j]:
-                index=+1
-                i=+1
-                j=+1
+                index = index + 1
+                i = i +1
+                j = j+ 1
             else:
-                i=+1
-                j=+1
+                break
     return(index)
 
 

@@ -1,15 +1,20 @@
 #Bedenk en schrijf zelf een functie die een lijst met getallen op volgorde sorteert
 def sorteren(lst):
-    print(lst)
-    a= 0
-    for i in lst:
-        if i == max(lst):
-            lst.remove(i)
-            #lst[len(lst)-a:]=i # TODO regel verbeteren: doel maximum van de lijst aan het eind van de lijst lst zetten
-            #a+=1
+    i = 0
+    a = 0
+    while a <= len(lst):
+        if i >= len(lst):
+            print(lst)
+            break
         else:
-            continue
-    return lst
+            index_max = lst.index(max(lst))-i
+            del lst[index_max]
+            lst.insert(-1-i,lst[index_max])
+            i = i +1
+            a = a + 1
 
 
-print(sorteren([1,4,5,2,3]))
+
+sorteren([5,8,2,10])
+
+# kom tot nu nie uit
